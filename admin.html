@@ -17,7 +17,7 @@ async function refresh(){show(await adm('list'))}
 function show(r){B=r.bookings;S=r.days;const f=$('#flt').value;
  const L=B.filter(b=>f=='all'||(f=='active'?b.status!='cancelled':b.status==f)).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
  $('#stats').textContent=`${B.filter(b=>b.status=='confirmed').length} confirmadas · ${B.filter(b=>b.status=='pending').length} pendentes · ${B.filter(b=>b.status=='cancelled').length} canceladas`;
- $('#tb').innerHTML=L.map(b=>`<tr><td>${b.date}</td><td>${b.time}</td><td><b>${b.name}</b></td><td>${b.phone}<br>${b.email}</td><td>${b.children} · ${b.ages||''}<br>Adultos: ${b.adults||0} · Mascota: ${b.pets||'-'}</td>
+ $('#tb').innerHTML=L.map(b=>`<tr><td>${b.date}</td><td>${b.time}</td><td><b>${b.name}</b></td><td>${b.phone}<br>WA: ${b.whatsapp||"-"}<br>${b.email}</td><td>${b.children} · ${b.ages||''}<br>Adultos: ${b.adults||0} · Mascota: ${b.pets||'-'}</td>
  <td style="max-width:240px">${b.special?'✨ '+b.special+'<br>':''}${b.song?'♪ '+b.song+'<br>':''}${b.notes||''}</td><td><span class="tag ${b.status}">${b.status=='pending'?'pendente':b.status=='confirmed'?'sinal pagado':'cancelada'}</span></td>
  <td>${b.status=='pending'?`<button onclick="act('markPaid','${b.id}')">✓ Sinal pagado</button><br>`:''}${b.status!='cancelled'?`<button onclick="mv('${b.id}')">Mover</button> <button onclick="ed('${b.id}')">Editar</button> <button onclick="if(confirm('Cancelar?'))act('cancel','${b.id}')">Cancelar</button>`:''}</td></tr>`).join('');bs();}
 $('#flt').onchange=()=>show({bookings:B,days:S});

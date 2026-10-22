@@ -29,3 +29,5 @@ table{width:100%;border-collapse:collapse;font-family:Jost,sans-serif;font-size:
 .herowrap .hero{padding:40px 30px}
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
 @media(max-width:800px){.herowrap{grid-template-columns:1fr}.heroimg{height:55vh}.gal{grid-template-columns:1fr 1fr}}
+
+.chk{display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:13px;margin-top:8px}.chk input{width:auto}
