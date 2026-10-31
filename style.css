@@ -9,11 +9,12 @@ header img{height:64px}.lang button{background:none;border:0;letter-spacing:.15e
 section{max-width:900px;margin:0 auto;padding:40px 22px}h2{font-weight:300;font-size:36px;text-align:center;margin:0 0 24px}
 .pack{border:1px solid #111;padding:36px;text-align:center}.pack .price{font-size:48px;font-weight:300}.pack ul{list-style:none;padding:0;font-family:Jost,sans-serif;font-size:15px;color:#333}.pack li{padding:5px 0;border-bottom:1px solid #f0f0f0}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:13px}.cal .h{text-align:center;color:#999;font-size:11px;letter-spacing:.1em}
-.day{aspect-ratio:1;border:1px solid #ddd;background:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center}.day small{font-size:10px;color:#888}
+.day{aspect-ratio:1;border:1px solid #ddd;background:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;padding:2px}.day small{font-size:10px;color:#888;line-height:1.1}
 .day.full,.day:disabled{color:#ccc;cursor:default;border-color:#f3f3f3}.day.sel{background:#111;color:#fff}.day.sel small{color:#ccc}
 .monthnav{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:Jost,sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:13px}
 .monthnav button{background:none;border:1px solid #111;width:36px;height:36px;cursor:pointer}
 .slots{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}.slot{padding:12px 20px;border:1px solid #111;background:#fff;cursor:pointer;font-size:15px}.slot.sel{background:#111;color:#fff}.slot:disabled{border-color:#ddd;color:#ccc;text-decoration:line-through;cursor:default}
+.back{background:none;border:0;cursor:pointer;font-family:Jost,Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#777;padding:0}.back:hover{color:#111}
 form{display:grid;grid-template-columns:1fr 1fr;gap:16px}form .full{grid-column:1/-1}label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#555;display:block;margin-bottom:4px}
 input,select,textarea{width:100%;padding:11px;border:0;border-bottom:1px solid #111;font-size:15px;background:#fafafa}textarea{min-height:70px}
 .btn{background:#111;color:#fff;border:0;padding:16px 34px;letter-spacing:.2em;text-transform:uppercase;font-size:13px;cursor:pointer}.btn.ghost{background:#fff;color:#111;border:1px solid #111}
